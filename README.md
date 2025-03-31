@@ -97,7 +97,7 @@ Represent the rating in emotional way to understand the upon different category 
 **>=0-Very Negative**       
 **>=1.5-Negative**   
 **>=2.5-Neutral**    
-**>=3.5-Positive**
+**>=3.5-Positive** 
 **>=4.5-Very Positive**
 
 
