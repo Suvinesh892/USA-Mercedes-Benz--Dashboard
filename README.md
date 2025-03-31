@@ -84,4 +84,36 @@ The focus column categorizes EV models into key segments: Luxury & Tech, Perform
     "General" )     
 
 
+## PAGE 3
 
+![Image](https://github.com/user-attachments/assets/33d4c168-1fea-4ff2-aaed-9e8c88c3d7c6)
+
+Describe overall scale of analysis from every category and best for column in this Dashboard
+
+
+![Image](https://github.com/user-attachments/assets/771a07fe-a6f7-47ea-8e70-d3b5f0710990)
+
+Represent the rating in emotional way to understand the upon different category like       
+**>=0-Very Negative**       
+**>=1.5-Negative**   
+**>=2.5-Neutral**    
+**>=3.5-Positive**
+**>=4.5-Very Positive**
+
+
+
+Rating category DAX
+
+       Rating_Category = 
+       SWITCH(TRUE(),ISBLANK('usa_mercedes_benz_prices'[Rating]) || 'usa_mercedes_benz_prices'[Rating] = 0, "Non-Rated",
+       'usa_mercedes_benz_prices'[Rating] >= 4.5, "Very Positive",
+       'usa_mercedes_benz_prices'[Rating] >= 3.5, "Positive",
+       'usa_mercedes_benz_prices'[Rating] >= 2.5, "Neutral",
+       'usa_mercedes_benz_prices'[Rating] >= 1.5, "Negative",
+       'usa_mercedes_benz_prices'[Rating] > 0, "Very Negative",
+       "Non-Rated"
+       )
+
+**Conclusion**
+
+This portfolio showcases critical insights into EV models, categorized effectively to highlight mileage, review trends, pricing, and segmentation such as Luxury & Tech, High Performance, Compact & Practical, and Ultra Luxury. It offers a streamlined and informative representation for a comprehensive analysis.
